@@ -11,6 +11,7 @@ function App() {
     useEffect(() => {
         void initUser();
     }, [initUser]);
+
     return (
         <>
             <Router>
