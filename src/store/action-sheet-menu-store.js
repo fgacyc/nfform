@@ -1,6 +1,6 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
 
 export const useActionSheetMenuStore = create((set) => ({
-    showMenu: false,
+  showMenu: false,
   setShowMenu: (showMenu) => set({ showMenu }),
-}))
+}));
