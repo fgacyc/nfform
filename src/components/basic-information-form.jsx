@@ -17,7 +17,7 @@ export default function BasicInformationForm({ ...props }) {
   const watchIndustry = form ? form.watch('basic.industry') : undefined;
 
   return (
-    <div className="w-full flex flex-col justify-center space-y-2" {...props}>
+    <div className="w-full flex flex-col mt-16 space-y-2" {...props}>
       <span className="text-2xl font-black mb-4">/ Basic Information</span>
       <FormField
         control={form.control}
