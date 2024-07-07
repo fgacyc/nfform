@@ -99,7 +99,7 @@ export default function Index() {
 
         if (entries[0].intersectionRatio > 0.5) setPage((page) => page - 1);
         if (entries[1].intersectionRatio > 0.5) {
-          setPage((page) => page + 1);
+          setPage((page) => page + (entries.length - 1));
           form.trigger();
         }
       },
@@ -144,27 +144,13 @@ export default function Index() {
           <PageIndicator
             total={totalPage}
             current={page}
-            className="fixed bottom-4 left-4"
+            className="fixed bottom-4 left-1/2 -translate-x-1/2"
             color="primary"
             style={{ '--active-dot-color': '#171717' }}
           />
-          {page + 1 === totalPage ? (
+          {page + 1 === totalPage && (
             <Button type="submit" className="fixed bottom-4 right-4" size="sm">
               Submit
-            </Button>
-          ) : (
-            <Button
-              type="button"
-              className="fixed bottom-4 right-4"
-              variant="secondary"
-              size="icon"
-              onClick={() =>
-                document
-                  .querySelector(`#${pageIds[page + 1]}`)
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
-            >
-              <ChevronDown className="h-4 w-4 text-muted-foreground" />
             </Button>
           )}
         </form>
