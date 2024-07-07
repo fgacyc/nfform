@@ -7,7 +7,7 @@ export default function FaithBackgroundForm({ ...props }) {
   const form = useFormStore((state) => state.form);
 
   return (
-    <div className="w-full flex flex-col justify-center space-y-2" {...props}>
+    <div className="w-full flex flex-col mt-16 space-y-2" {...props}>
       <span className="text-2xl font-black mb-4">/ Faith Background</span>
       <FormField
         control={form.control}
